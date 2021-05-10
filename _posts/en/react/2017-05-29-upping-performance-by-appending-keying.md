@@ -2,14 +2,14 @@
 layout: post
 
 title: Upping Performance by Appending/Keying
-tip-number: 75
-tip-username: loverajoel 
+tip-number: 84
+tip-username: loverajoel
 tip-username-profile: https://github.com/loverajoel
 tip-tldr: React uses a mechanism called **reconciliation** for efficient rendering on update.
 
 categories:
-    - en
-    - react
+  - en
+  - react
 ---
 
 React uses a mechanism called **reconciliation** for efficient rendering on
@@ -29,20 +29,20 @@ time, if two children differ, then React will mutate every one.
 
 So, for example, if you've got the following:
 
-``` html
+```html
 <ul>
-    <li>Sherlock Holmes</li>
-    <li>John Hamish Watson</li>
+  <li>Sherlock Holmes</li>
+  <li>John Hamish Watson</li>
 </ul>
 ```
 
 And you insert an element at the beginning
 
-``` html
+```html
 <ul>
-    <li>Mycroft Holmes</li>
-    <li>Sherlock Holmes</li>
-    <li>John Hamish Watson</li>
+  <li>Mycroft Holmes</li>
+  <li>Sherlock Holmes</li>
+  <li>John Hamish Watson</li>
 </ul>
 ```
 
@@ -55,13 +55,13 @@ better, not touching Sherlock nor John.
 
 But you can't always append, sometimes you've just got to insert.
 
-This is were **keys** come in. If you supply a **key** *attribute* then React
+This is were **keys** come in. If you supply a **key** _attribute_ then React
 will figure out an efficient transformation from the old tree to the new one.
 
-``` html
+```html
 <ul>
-    <li key="3">Mycroft Holmes</li>
-    <li key="1">Sherlock Holmes</li>
-    <li key="2">John Hamish Watson</li>
+  <li key="3">Mycroft Holmes</li>
+  <li key="1">Sherlock Holmes</li>
+  <li key="2">John Hamish Watson</li>
 </ul>
 ```
